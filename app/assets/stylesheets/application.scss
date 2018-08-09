@@ -1,8 +1,13 @@
-/*
- *= require_tree .
- *= require_self
- */
-
+// Variables, mixins, ect.
 @import 'abstracts/index';
+
+// Vendor
 @import 'bootstrap';
+@import "font-awesome-sprockets";
+@import "font-awesome";
+
+// Base
+@import 'base/index';
+
+// Components
 @import 'components/index';

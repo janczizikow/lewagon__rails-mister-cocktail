@@ -1,0 +1,21 @@
+<nav class="navbar navbar-expand-md navbar-dark bg-dark">
+  <%= link_to 'Mister Cocktail', cocktails_path, class: "navbar-brand" %>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarToggle" aria-controls="navbarToggle"
+    aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+
+  <div class="collapse navbar-collapse" id="navbarToggle">
+    <div class="navbar-nav mr-auto">
+      <%= form_tag cocktails_path, method: :get, class: "mt-2 mt-lg-0" do %>
+        <div class="input-group">
+          <%= text_field_tag :query, nil, placeholder: "Search...", class: "form-control" %>
+          <div class="input-group-append">
+            <%= button_tag raw('<i class="fas fa-search"></i>'), class: "btn btn-success my-sm-0" %>
+          </div>
+        </div>
+      <% end %>
+    </div>
+    <%= link_to "Add a cocktail", new_cocktail_path, class: "btn btn-primary btn-block btn-add my-2 my-lg-0" %>
+  </div>
+</nav>
