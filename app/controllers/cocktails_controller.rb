@@ -5,7 +5,7 @@ class CocktailsController < ApplicationController
     if params[:query].blank?
       @cocktails = Cocktail.all.order('created_at DESC')
     else
-      @cocktails = Cocktail.where('name LIKE ?', "%#{params[:query]}%").order('created_at DESC')
+      @cocktails = Cocktail.where('lower(name) LIKE ?', "%#{params[:query]}%").order('created_at DESC')
     end
   end
 
@@ -30,7 +30,7 @@ class CocktailsController < ApplicationController
   private
 
   def cocktail_params
-    params.require(:cocktail).permit(:name)
+    params.require(:cocktail).permit(:name, :description)
   end
 
   def set_cocktail

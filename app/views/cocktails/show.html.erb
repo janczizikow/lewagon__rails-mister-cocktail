@@ -1,9 +1,8 @@
 <section class="my-1">
   <div class="container">
-    <div class="my-4">
-      <%= link_to 'Back to cocktails list', cocktails_path %>
-    </div>
+    <%= render 'shared/back' %>
     <h2><%= @cocktail.name %></h2>
+    <p><%= @cocktail.description %></p>
     <br>
     <div class="row">
       <div class="col-md-4">
