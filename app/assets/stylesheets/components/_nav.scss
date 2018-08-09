@@ -1,5 +1,21 @@
-.nav-bg--dark {
+.header {
+  transition: background-color .15s ease;
+}
+
+.nav--scrolled {
   background-color: #212529;
+}
+
+.nav-fake-bg {
+  background-color: #212529;
+  height: 56px;
+}
+
+.btn-search {
+  background-color: white;
+  border: 1px solid #ced4da;
+  border-left-color: transparent;
+
 }
 
 @media only screen and (min-width: 768px) {
