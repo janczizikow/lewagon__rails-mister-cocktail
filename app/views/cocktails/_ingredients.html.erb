@@ -1,0 +1,10 @@
+<% cocktail.doses.each do |dose| %>
+  <div class="d-flex justify-content-between">
+    <p><%= dose.ingredient.name %> - <%= dose.description %></p>
+    <%= link_to raw('<i class="far fa-trash-alt"></i>'),
+      cocktail_dose_path(cocktail, dose),
+      method: 'delete',
+      class: 'text-danger'
+    %>
+  </div>
+<% end %>

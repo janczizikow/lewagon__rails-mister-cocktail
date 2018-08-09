@@ -1,2 +1,12 @@
-<h1>Cocktails#index</h1>
-<p>Find me in app/views/cocktails/index.html.erb</p>
+<section class="my-5">
+  <div class="container">
+    <h2>Cocktails</h2>
+    <div class="row">
+    <% @cocktails.each do |cocktail| %>
+      <div class="col-md-6 col-lg-4">
+        <%= render 'shared/card', id: cocktail, name: cocktail.name %>
+      </div>
+    <% end %>
+    </div>
+  </div>
+</section>

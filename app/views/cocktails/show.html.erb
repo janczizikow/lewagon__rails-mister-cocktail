@@ -1,2 +1,23 @@
-<h1>Cocktails#show</h1>
-<p>Find me in app/views/cocktails/show.html.erb</p>
+<section class="my-1">
+  <div class="container">
+    <div class="my-4">
+      <%= link_to 'Back to cocktails list', cocktails_path %>
+    </div>
+    <h2><%= @cocktail.name %></h2>
+    <br>
+    <div class="row">
+      <div class="col-md-4">
+        <div class="card py-3 px-3">
+          <h4>Ingredients</h4>
+          <%= render 'cocktails/ingredients', cocktail: @cocktail %>
+        </div>
+      </div>
+      <div class="col-md-4 offset-md-4">
+        <div class="card py-3 px-3">
+          <h4>Add ingredients</h4>
+          <%= render 'doses/new', cocktail: @cocktail, dose: @dose %>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
