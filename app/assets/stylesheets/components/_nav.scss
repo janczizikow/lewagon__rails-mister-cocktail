@@ -1,14 +1,5 @@
-.header {
-  transition: background-color .15s ease;
-}
-
-.nav--scrolled {
+.navbar-dark {
   background-color: #212529;
-}
-
-.nav-fake-bg {
-  background-color: #212529;
-  height: 56px;
 }
 
 .btn-search {
@@ -24,3 +15,16 @@
     width: auto;
   }
 }
+
+// .header {
+//   transition: background-color .15s ease;
+// }
+
+// .nav--scrolled {
+//   background-color: #212529;
+// }
+
+// .nav-fake-bg {
+//   background-color: #212529;
+//   height: 56px;
+// }
