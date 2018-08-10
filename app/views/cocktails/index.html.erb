@@ -5,7 +5,13 @@
     <div class="row">
     <% @cocktails.each do |cocktail| %>
       <div class="col-md-6 col-lg-4">
-        <%= render 'shared/card', id: cocktail, name: cocktail.name, description: cocktail.description %>
+        <%= render(
+          'shared/card',
+          id: cocktail,
+          name: cocktail.name,
+          description: cocktail.description,
+          photo: cocktail.photo
+        ) %>
       </div>
     <% end %>
     </div>

@@ -11,6 +11,11 @@
             <%= f.label :description %>
             <%= f.text_area :description, class: 'form-control' %>
           </div>
+          <div class="form-group">
+            <%= f.label :photo %>
+            <%= f.file_field :photo, class: 'form-control-file' %>
+            <%= f.hidden_field :photo_cache %>
+          </div>
           <%= f.submit 'Add new cocktail', class:'btn btn-primary btn-block' %>
       <% end %>
       <%= render 'shared/back' %>
