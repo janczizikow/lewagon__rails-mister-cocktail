@@ -6,15 +6,24 @@
     <br>
     <div class="row">
       <div class="col-md-4">
-        <div class="card py-3 px-3">
+        <div class="card py-3 px-3 my-3">
           <h4>Ingredients</h4>
           <%= render 'cocktails/ingredients', cocktail: @cocktail %>
         </div>
       </div>
       <div class="col-md-4 offset-md-4">
-        <div class="card py-3 px-3">
+        <div class="card py-3 px-3 my-3">
           <h4>Add ingredients</h4>
           <%= render 'doses/new', cocktail: @cocktail, dose: @dose %>
+        </div>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col">
+        <div class="card py-3 px-3 my-3">
+          <h4>Reviews</h4>
+          <%= render 'cocktails/reviews', cocktail: @cocktail %>
+          <%= render 'reviews/new', cocktail: @cocktail, review: @review %>
         </div>
       </div>
     </div>
