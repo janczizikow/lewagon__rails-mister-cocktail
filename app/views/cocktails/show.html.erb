@@ -11,13 +11,13 @@
     <p><%= @cocktail.description %></p>
     <br>
     <div class="row">
-      <div class="col-md-4">
+      <div class="col-md-6 col-lg-4">
         <div class="card py-3 px-3 my-3">
           <h4>Ingredients</h4>
           <%= render 'cocktails/ingredients', cocktail: @cocktail %>
         </div>
       </div>
-      <div class="col-md-4 offset-md-4">
+      <div class="col-md-6 col-lg-4 offset-lg-4">
         <div class="card py-3 px-3 my-3">
           <h4>Add ingredients</h4>
           <%= render 'doses/new', cocktail: @cocktail, dose: @dose %>
