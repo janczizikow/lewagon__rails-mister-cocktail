@@ -1,4 +1,12 @@
 <% cocktail.reviews.each do |review| %>
+  <div class="d-flex">
+    <% (1..5).to_a.each do |el| %>
+      <% if el <= review.rating %>
+        <i class="fas fa-star" style="color: #ffb400;"></i>
+      <% else %>
+        <i class="fas fa-star" style="color: #ccc"></i>
+      <% end %>
+    <% end %>
+  </div>
   <p><%= review.content %></p>
-  <p><%= review.rating %></p>
 <% end %>
