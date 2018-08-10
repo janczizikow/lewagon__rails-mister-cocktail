@@ -3,6 +3,15 @@
   text-decoration: none!important;
   color: inherit!important;
   box-shadow: 0 10px 20px 0 rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+
+  &--animation {
+    transition: transform .3s ease;
+
+    &:hover {
+      transform: translateY(-5px);
+    }
+  }
 }
 
 .card-description {
