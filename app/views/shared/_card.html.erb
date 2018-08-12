@@ -1,6 +1,11 @@
 <%= link_to cocktail_path(id), class: 'card card--animation my-3' do  %>
   <% unless photo.blank? %>
-    <%= cl_image_tag photo, width: 510, alt: name, class: 'card-img-top' %>
+    <%= cl_image_tag photo,
+      transformation: [
+        {:aspect_ratio=>"16:9", :crop=>"fill"},
+        {:width=>"510", :dpr=>"auto", :crop=>"scale"},
+        {:quality=>"auto"}
+      ], alt: name, class: 'card-img-top lazyload' %>
   <% end %>
   <div class="card-body">
     <h5 class="card-title"><%= name %></h5>

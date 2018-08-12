@@ -1,7 +1,7 @@
 <% unless @cocktail.photo.blank? %>
   <section
     class="hero--sm"
-    style="background-image: url('<%= cl_image_path @cocktail.photo %>')">
+    style="background-image: url('<%= cl_image_path @cocktail.photo, width: 1600, crop: 'scale', quality: 'auto' %>')">
   </section>
 <% end %>
 <section class="my-1">
